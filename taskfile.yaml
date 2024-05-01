@@ -1,0 +1,12 @@
+version: '3'
+
+dotenv: ['.env', '{{.ENV}}/.env.', '{{.HOME}}/.env']
+
+includes:
+  golden-sample: https://raw.githubusercontent.com/adlnc/taskfile-golden-sample/main/taskfile.yaml
+
+tasks:
+  hello:
+    silent: true
+    cmds:
+      - echo "Hello from the remote Taskfile!"
